@@ -62,8 +62,10 @@ typedef NSArray * (^ResponseHandle)(ZHHTTPResponse *response);
 /**
  添加依赖
  B C 都依赖 A 时。B C 先后执行顺序取决于请求顺序数组 requests
- 
- @param request 依赖的 request 先执行
+ 注意：self 被依赖后，不要在设置依赖其他 request 例如
+ 错误：A 依赖 B . B 依赖 C
+ 正确：B 依赖 C . A 依赖 B
+ @param request 被依赖的 request 先执行
  */
 - (void)addDependency:(ZHHTTPRequest *)request;
 
