@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AFA7E501DF093FA2833C5B0 /* libPods-ZHHttpRequestQueueManagerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C837C8A9AC51C30C5648D45 /* libPods-ZHHttpRequestQueueManagerDemo.a */; };
+		704F7AE520BF88420041EA49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 704F7AE420BF88420041EA49 /* AppDelegate.m */; };
+		704F7AE820BF88420041EA49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 704F7AE720BF88420041EA49 /* ViewController.m */; };
+		704F7AEB20BF88420041EA49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704F7AE920BF88420041EA49 /* Main.storyboard */; };
+		704F7AED20BF88430041EA49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704F7AEC20BF88430041EA49 /* Assets.xcassets */; };
+		704F7AF020BF88430041EA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704F7AEE20BF88430041EA49 /* LaunchScreen.storyboard */; };
+		704F7AF320BF88430041EA49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 704F7AF220BF88430041EA49 /* main.m */; };
+		704F7B0020BF88550041EA49 /* ZHHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 704F7AFB20BF88550041EA49 /* ZHHTTPRequest.m */; };
+		704F7B0120BF88550041EA49 /* ZHHTTPRequestQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 704F7AFC20BF88550041EA49 /* ZHHTTPRequestQueueManager.m */; };
+		704F7B0220BF88550041EA49 /* ZHHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 704F7AFE20BF88550041EA49 /* ZHHTTPResponse.m */; };
+		704F7B0520BF90CA0041EA49 /* ZHAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 704F7B0420BF90CA0041EA49 /* ZHAFHTTPSessionManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		388461DAF7A01EC1EB40E7A2 /* Pods-ZHHttpRequestQueueManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHttpRequestQueueManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHHttpRequestQueueManagerDemo/Pods-ZHHttpRequestQueueManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4C837C8A9AC51C30C5648D45 /* libPods-ZHHttpRequestQueueManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZHHttpRequestQueueManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		704F7AE020BF88420041EA49 /* ZHHttpRequestQueueManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHHttpRequestQueueManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		704F7AE320BF88420041EA49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		704F7AE420BF88420041EA49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		704F7AE620BF88420041EA49 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		704F7AE720BF88420041EA49 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		704F7AEA20BF88420041EA49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		704F7AEC20BF88430041EA49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		704F7AEF20BF88430041EA49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		704F7AF120BF88430041EA49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		704F7AF220BF88430041EA49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		704F7AFA20BF88550041EA49 /* ZHHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHHTTPResponse.h; sourceTree = "<group>"; };
+		704F7AFB20BF88550041EA49 /* ZHHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHTTPRequest.m; sourceTree = "<group>"; };
+		704F7AFC20BF88550041EA49 /* ZHHTTPRequestQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHTTPRequestQueueManager.m; sourceTree = "<group>"; };
+		704F7AFD20BF88550041EA49 /* ZHHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHHTTPRequest.h; sourceTree = "<group>"; };
+		704F7AFE20BF88550041EA49 /* ZHHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHTTPResponse.m; sourceTree = "<group>"; };
+		704F7AFF20BF88550041EA49 /* ZHHTTPRequestQueueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHHTTPRequestQueueManager.h; sourceTree = "<group>"; };
+		704F7B0320BF90CA0041EA49 /* ZHAFHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHAFHTTPSessionManager.h; sourceTree = "<group>"; };
+		704F7B0420BF90CA0041EA49 /* ZHAFHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHAFHTTPSessionManager.m; sourceTree = "<group>"; };
+		EF327364C0AAB916C938ACD2 /* Pods-ZHHttpRequestQueueManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHttpRequestQueueManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHHttpRequestQueueManagerDemo/Pods-ZHHttpRequestQueueManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		704F7ADD20BF88420041EA49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFA7E501DF093FA2833C5B0 /* libPods-ZHHttpRequestQueueManagerDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EF14E8158B2DBBDCD1CDF80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF327364C0AAB916C938ACD2 /* Pods-ZHHttpRequestQueueManagerDemo.debug.xcconfig */,
+				388461DAF7A01EC1EB40E7A2 /* Pods-ZHHttpRequestQueueManagerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		704F7AD720BF88420041EA49 = {
+			isa = PBXGroup;
+			children = (
+				704F7AE220BF88420041EA49 /* ZHHttpRequestQueueManagerDemo */,
+				704F7AE120BF88420041EA49 /* Products */,
+				2EF14E8158B2DBBDCD1CDF80 /* Pods */,
+				EE6B50172E7ADF923375CBD8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		704F7AE120BF88420041EA49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				704F7AE020BF88420041EA49 /* ZHHttpRequestQueueManagerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		704F7AE220BF88420041EA49 /* ZHHttpRequestQueueManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				704F7AF920BF88550041EA49 /* ZHHttpRequestQueueManager */,
+				704F7AE320BF88420041EA49 /* AppDelegate.h */,
+				704F7AE420BF88420041EA49 /* AppDelegate.m */,
+				704F7AE620BF88420041EA49 /* ViewController.h */,
+				704F7AE720BF88420041EA49 /* ViewController.m */,
+				704F7AE920BF88420041EA49 /* Main.storyboard */,
+				704F7AEC20BF88430041EA49 /* Assets.xcassets */,
+				704F7AEE20BF88430041EA49 /* LaunchScreen.storyboard */,
+				704F7AF120BF88430041EA49 /* Info.plist */,
+				704F7AF220BF88430041EA49 /* main.m */,
+			);
+			path = ZHHttpRequestQueueManagerDemo;
+			sourceTree = "<group>";
+		};
+		704F7AF920BF88550041EA49 /* ZHHttpRequestQueueManager */ = {
+			isa = PBXGroup;
+			children = (
+				704F7AFF20BF88550041EA49 /* ZHHTTPRequestQueueManager.h */,
+				704F7AFC20BF88550041EA49 /* ZHHTTPRequestQueueManager.m */,
+				704F7AFD20BF88550041EA49 /* ZHHTTPRequest.h */,
+				704F7AFB20BF88550041EA49 /* ZHHTTPRequest.m */,
+				704F7AFA20BF88550041EA49 /* ZHHTTPResponse.h */,
+				704F7AFE20BF88550041EA49 /* ZHHTTPResponse.m */,
+				704F7B0320BF90CA0041EA49 /* ZHAFHTTPSessionManager.h */,
+				704F7B0420BF90CA0041EA49 /* ZHAFHTTPSessionManager.m */,
+			);
+			name = ZHHttpRequestQueueManager;
+			path = ../../ZHHttpRequestQueueManager;
+			sourceTree = "<group>";
+		};
+		EE6B50172E7ADF923375CBD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C837C8A9AC51C30C5648D45 /* libPods-ZHHttpRequestQueueManagerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		704F7ADF20BF88420041EA49 /* ZHHttpRequestQueueManagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 704F7AF620BF88430041EA49 /* Build configuration list for PBXNativeTarget "ZHHttpRequestQueueManagerDemo" */;
+			buildPhases = (
+				B88576B9F98255AB5972CD3D /* [CP] Check Pods Manifest.lock */,
+				704F7ADC20BF88420041EA49 /* Sources */,
+				704F7ADD20BF88420041EA49 /* Frameworks */,
+				704F7ADE20BF88420041EA49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZHHttpRequestQueueManagerDemo;
+			productName = ZHHttpRequestQueueManagerDemo;
+			productReference = 704F7AE020BF88420041EA49 /* ZHHttpRequestQueueManagerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		704F7AD820BF88420041EA49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = pjg;
+				TargetAttributes = {
+					704F7ADF20BF88420041EA49 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 704F7ADB20BF88420041EA49 /* Build configuration list for PBXProject "ZHHttpRequestQueueManagerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 704F7AD720BF88420041EA49;
+			productRefGroup = 704F7AE120BF88420041EA49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				704F7ADF20BF88420041EA49 /* ZHHttpRequestQueueManagerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		704F7ADE20BF88420041EA49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				704F7AF020BF88430041EA49 /* LaunchScreen.storyboard in Resources */,
+				704F7AED20BF88430041EA49 /* Assets.xcassets in Resources */,
+				704F7AEB20BF88420041EA49 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B88576B9F98255AB5972CD3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZHHttpRequestQueueManagerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		704F7ADC20BF88420041EA49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				704F7B0220BF88550041EA49 /* ZHHTTPResponse.m in Sources */,
+				704F7AE820BF88420041EA49 /* ViewController.m in Sources */,
+				704F7B0120BF88550041EA49 /* ZHHTTPRequestQueueManager.m in Sources */,
+				704F7B0020BF88550041EA49 /* ZHHTTPRequest.m in Sources */,
+				704F7AF320BF88430041EA49 /* main.m in Sources */,
+				704F7B0520BF90CA0041EA49 /* ZHAFHTTPSessionManager.m in Sources */,
+				704F7AE520BF88420041EA49 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		704F7AE920BF88420041EA49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				704F7AEA20BF88420041EA49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		704F7AEE20BF88430041EA49 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				704F7AEF20BF88430041EA49 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		704F7AF420BF88430041EA49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		704F7AF520BF88430041EA49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		704F7AF720BF88430041EA49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF327364C0AAB916C938ACD2 /* Pods-ZHHttpRequestQueueManagerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZHHttpRequestQueueManagerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moreunion.ZHHttpRequestQueueManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		704F7AF820BF88430041EA49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 388461DAF7A01EC1EB40E7A2 /* Pods-ZHHttpRequestQueueManagerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZHHttpRequestQueueManagerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moreunion.ZHHttpRequestQueueManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		704F7ADB20BF88420041EA49 /* Build configuration list for PBXProject "ZHHttpRequestQueueManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				704F7AF420BF88430041EA49 /* Debug */,
+				704F7AF520BF88430041EA49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		704F7AF620BF88430041EA49 /* Build configuration list for PBXNativeTarget "ZHHttpRequestQueueManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				704F7AF720BF88430041EA49 /* Debug */,
+				704F7AF820BF88430041EA49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 704F7AD820BF88420041EA49 /* Project object */;
+}

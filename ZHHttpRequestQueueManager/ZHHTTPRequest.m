@@ -50,4 +50,23 @@
     return (NSArray *)nil;
 }
 
+/**
+ 返回方法类型字符串
+
+ @return string
+ */
+- (NSString *)stringFromMethodType {
+    switch (self.methodType) {
+        case ZHHTTPRequestMethodTypeGET: {
+            return @"GET";
+            break;
+        }
+        case ZHHTTPRequestMethodTypePOST: {
+            return @"POST";
+            break;
+        }
+    }
+    return @"GET";
+}
+
 @end

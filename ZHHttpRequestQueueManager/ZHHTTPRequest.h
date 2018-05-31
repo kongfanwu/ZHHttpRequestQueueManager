@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 @class ZHHTTPResponse;
 
 /** 请求类型 */
@@ -46,6 +47,10 @@ typedef NSArray * (^ResponseHandle)(ZHHTTPResponse *response);
 /** 依赖优先级 */
 @property (nonatomic, readonly) ZHHTTPRequestPriority requestPriority;
 
+/** 上传回调 */
+@property (nonatomic, copy) void (^uploadProgress)(NSProgress *uploadProgress);
+/** 下载回调 */
+@property (nonatomic, copy) void (^downloadProgress)(NSProgress *downloadProgress);
 
 /**
  初始化方法
@@ -71,4 +76,12 @@ typedef NSArray * (^ResponseHandle)(ZHHTTPResponse *response);
 
 /** 返回 nil 解决语法报错问题 */
 + (NSArray *)empty;
+
+/**
+ 返回方法类型字符串
+ 
+ @return string
+ */
+- (NSString *)stringFromMethodType;
+
 @end

@@ -33,7 +33,7 @@
 #import <Foundation/Foundation.h>
 #import "ZHHTTPRequest.h"
 #import "ZHHTTPResponse.h"
-
+#import "ZHAFHTTPSessionManager.h"
 
 /**
  全部成功后回调

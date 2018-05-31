@@ -7,6 +7,7 @@
 //
 
 #import "ZHHTTPRequestQueueManager.h"
+#import <AFHTTPSessionManager.h>
 
 @interface ZHHTTPRequestQueueManager()
 
@@ -31,30 +32,6 @@
         self.responses = [NSMutableArray arrayWithCapacity:self.requests.count];
     }
     return self;
-}
-
-- (void)a {
-    dispatch_group_t request_blocks_group = dispatch_group_create();
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    dispatch_group_async(request_blocks_group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        for (int i = 0; i < 3; i++) {
-            NSLog(@"请求开始%d", i);
-            AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-            NSString *sidURL = [NSString stringWithFormat:@"%@%@",GETSID,@"deviceRegister"];
-            [manager GET:sidURL parameters:@{@"tuid":[NSString stringWithFormat:@"%@",MyObject([[NSUserDefaults standardUserDefaults] objectForKey:@"tuid"])],@"idfa":MyObject([[NSUserDefaults standardUserDefaults] objectForKey:@"idfaid"]),@"platform":@"1"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                NSLog(@"请求结束%d", i);
-                dispatch_semaphore_signal(semaphore);
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                dispatch_semaphore_signal(semaphore);
-            }];
-            long result = dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-            NSLog(@"result%d: %ld", i, result);
-        }
-    });
-    dispatch_group_notify(request_blocks_group, dispatch_get_main_queue(), ^{
-        NSLog(@"完成");
-    });
 }
 
 - (void)startRequestResponse:(RequestsResponse)response {
@@ -108,8 +85,6 @@
             }
         });
     });
-    
-    
 }
 
 /**
@@ -163,6 +138,7 @@
     }
 }
 
+/*
 - (void)request:(ZHHTTPRequest *)request complete:(void(^)())complete {
     NetworkRequestMethodENUM methodType = request.methodType ==  ZHHTTPRequestMethodTypeGET ? NetworkRequestMethodGET : NetworkRequestMethodPOST;
     [HttpRequestSigleton requestWithRequestMethod:methodType methodName:request.url Params:request.params Optional:nil Success:^(id  _Nonnull json) {
@@ -195,7 +171,38 @@
         });
     }];
 }
+*/
 
+- (void)request:(ZHHTTPRequest *)request complete:(void(^)(void))complete {
+    NSString *methodType = [request stringFromMethodType];
+    ZHAFHTTPSessionManager *manager = [ZHAFHTTPSessionManager manager];
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithHTTPMethod:methodType URLString:request.url parameters:request.params uploadProgress:request.uploadProgress downloadProgress:request.downloadProgress success:^(NSURLSessionDataTask *task, id responseObject) {
+        if (request.response) {
+            BOOL success = YES;
+            id newJson = responseObject;
+            NSError *error;
+            if ([responseObject[@"error_code"] integerValue] != 0) {
+                success = NO;
+                newJson = nil;
+                error = [[NSError alloc] initWithDomain:@"ZHHTTPRequestQueueManager" code:[responseObject[@"error_code"] integerValue] userInfo:@{NSLocalizedDescriptionKey:[NSString stringWithFormat:@"requestId:%@ %@", request.ID, responseObject[@"error_msg"]]}];
+            }
+            ZHHTTPResponse *response = [[ZHHTTPResponse alloc] initId:request.ID success:success json:newJson error:error];
+            response.modelArray = request.response(response);
+            
+            [self.responses addObject:response];
+        }
+        
+        if (complete) complete();
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (request.response) {
+            ZHHTTPResponse *response = [[ZHHTTPResponse alloc] initId:request.ID success:NO json:nil error:error];
+            response.modelArray = request.response(response);
+        }
+        
+        if (complete) complete();
+    }];
+    [dataTask resume];
+}
 /**
  根据请求优先级，相同的组成一个数组，最后返回一个大数组
 
