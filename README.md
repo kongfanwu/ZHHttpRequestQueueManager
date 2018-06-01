@@ -13,14 +13,14 @@ ZHHTTPRequest *request = [[ZHHTTPRequest alloc] initWithId:@"1" method:ZHHTTPReq
         // 返回 model 数组
          return @[@"1", @"2"];
      }
-     return request.empty;
+     return ZHHTTPRequest.empty;
  }];
  
  ZHHTTPRequest *request2 = [[ZHHTTPRequest alloc] initWithId:@"2" method:ZHHTTPRequestMethodTypeGET url:@"getRecommend" params:@{@"type":@"9",@"limit":@"1"} response:^(ZHHTTPResponse *response) {
      if (response.success) {
          return @[@"3", @"4"];
      }
-     return request.empty;
+     return ZHHTTPRequest.empty;
  }];
  
  /* 注意：
