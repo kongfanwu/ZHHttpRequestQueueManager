@@ -8,6 +8,7 @@ ZHHTTPRequestQueueManager.m 类
 
 ## 示例
 ```
+// 请求1
 ZHHTTPRequest *request = [[ZHHTTPRequest alloc] initWithId:@"1" method:ZHHTTPRequestMethodTypeGET url:@"getRecommend" params:@{@"type":@"9",@"limit":@"1"} response:^(ZHHTTPResponse *response) {
      if (response.success) {
         // 返回 model 数组
@@ -15,7 +16,7 @@ ZHHTTPRequest *request = [[ZHHTTPRequest alloc] initWithId:@"1" method:ZHHTTPReq
      }
      return ZHHTTPRequest.empty;
  }];
- 
+ // 请求2
  ZHHTTPRequest *request2 = [[ZHHTTPRequest alloc] initWithId:@"2" method:ZHHTTPRequestMethodTypeGET url:@"getRecommend" params:@{@"type":@"9",@"limit":@"1"} response:^(ZHHTTPResponse *response) {
      if (response.success) {
          return @[@"3", @"4"];
@@ -23,12 +24,14 @@ ZHHTTPRequest *request = [[ZHHTTPRequest alloc] initWithId:@"1" method:ZHHTTPReq
      return ZHHTTPRequest.empty;
  }];
  
- /* 注意：
+ /* 设置依赖。request执行完成后request2在执行。
+ *  注意：
  *  设置依赖就是串行请求。不设置就是并行请求。
  *  其他注意事项看方法注释
  */ 
  [request2 addDependency:request];
  
+ // 创建管理对象并开始请求并监听全部请求完成回调
  ZHHTTPRequestQueueManager *manager = [[ZHHTTPRequestQueueManager alloc] initWithRequest:@[request2, request]];
  [manager startRequestResponse:^(BOOL success, NSArray<ZHHTTPResponse *> *responses, NSError *error) {
      if (response.success) {
